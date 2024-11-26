@@ -4,10 +4,11 @@
 import NextLink from 'next/link';
 
 // @mui
-import Grid from '@mui/material/Grid2';
+import Grid from '@mui/material/Grid';
 import Link from '@mui/material/Link';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
+import { IconCode, IconBrain, IconBook, IconHelp } from '@tabler/icons-react';
 
 // @third-party
 import { motion } from 'framer-motion';
@@ -129,19 +130,35 @@ const usefullLinks = [
 export default function Footer7() {
   const logoFollowContent = (
     <Stack sx={{ alignItems: 'flex-start', gap: { xs: 1.5, sm: 3 } }}>
+      {/* Replace <LogoSection /> with your actual logo component */}
       <LogoSection />
       <Typography variant="h6" sx={{ maxWidth: { sm: 280 }, mb: { xs: -1, sm: -2.5 } }}>
-        {process.env.NEXT_PUBLIC_VERSION}
+        Version {process.env.NEXT_PUBLIC_VERSION || '1.0'}
       </Typography>
       <Typography variant="body2" sx={{ maxWidth: { sm: 280 } }}>
-        Explore the different versions of our SaasAble template.
+        Helping learners build their coding skills with cutting-edge tools and personalized feedback.
       </Typography>
     </Stack>
   );
 
+  const usefulLinks = [
+    { icon: <IconCode size={18} />, title: 'Interactive Lessons', href: '/lessons' },
+    { icon: <IconBrain size={18} />, title: 'AI Mentor', href: '/ai-mentor' },
+    { icon: <IconBook size={18} />, title: 'Resources', href: '/resources' },
+    { icon: <IconHelp size={18} />, title: 'Support', href: '/support' }
+  ];
+
+  const sitemapData = [
+    { title: 'Home', href: '/' },
+    { title: 'About Us', href: '/about-us' },
+    { title: 'Features', href: '/features' },
+    { title: 'Contact', href: '/contact' }
+  ];
+
   return (
-    <ContainerWrapper sx={{ py: SECTION_COMMON_PY }}>
-      <Stack id="footer-7" role="contentinfo" rel="noopener noreferrer" aria-label="Footer 7" sx={{ gap: { xs: 3, sm: 4, md: 5 } }}>
+    <ContainerWrapper sx={{ py: 4 }}>
+      <Stack id="footer-7" role="contentinfo" aria-label="Footer" sx={{ gap: { xs: 3, sm: 4, md: 5 } }}>
+        {/* Upper Section: Logo and Useful Links */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -152,22 +169,14 @@ export default function Footer7() {
           }}
         >
           <Grid container spacing={{ xs: 4, md: 3 }}>
-            <Grid size={{ xs: 12, md: 6 }}>
+            <Grid item xs={12} md={6}>
               <Stack direction={{ sm: 'row', md: 'column' }} sx={{ gap: 3, justifyContent: 'space-between', height: 1 }}>
                 {logoFollowContent}
                 <Stack sx={{ gap: { xs: 2, sm: 2.5, md: 3 } }}>
-                  {usefullLinks.map((item, index) => (
+                  {usefulLinks.map((item, index) => (
                     <Stack direction="row" sx={{ gap: 1, alignItems: 'center' }} key={index}>
                       {item.icon}
-                      <Link
-                        component={NextLink}
-                        variant="body2"
-                        color="text.secondary"
-                        href={item.href}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label="Usefull Links"
-                      >
+                      <Link variant="body2" color="text.secondary" href={item.href} aria-label={item.title}>
                         {item.title}
                       </Link>
                     </Stack>
@@ -175,11 +184,13 @@ export default function Footer7() {
                 </Stack>
               </Stack>
             </Grid>
-            <Grid size={{ xs: 12, md: 6 }}>
-              <Sitemap list={data} isMenuDesign />
+            <Grid item xs={12} md={6}>
+              <Sitemap list={sitemapData} isMenuDesign />
             </Grid>
           </Grid>
         </motion.div>
+
+        {/* Lower Section: Copyright and Social Links */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -200,7 +211,7 @@ export default function Footer7() {
                 px: { xs: 2, sm: 3 }
               }}
             >
-              <Copyright type={CopyrightType.TYPE3} />
+              <Typography variant="body2">© {new Date().getFullYear()} Fun Code. All rights reserved.</Typography>
               <FollowUS heading={false} color="grey.100" />
             </Stack>
           </GraphicsCard>
