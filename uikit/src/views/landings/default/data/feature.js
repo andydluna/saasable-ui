@@ -161,40 +161,40 @@ export const feature10 = {
 };
 
 export const feature20 = {
-  heading: 'Comprehensive UI Kit Tailored to your Need',
-  caption: 'Ready to transform your SaaS designs with one powerful UI Kit?',
-  actionBtn: { children: 'Buy Now', href: BUY_NOW_URL, ...linkProps },
-  secondaryBtn: { children: 'Explore Blocks', href: SECTION_PATH },
+  heading: 'Elevate Your Coding Journey with Tailored Features',
+  caption: 'Empowering learners with a comprehensive platform to master coding fundamentals and beyond.',
+  actionBtn: { children: 'Start Learning', href: '/get-started', ...linkProps },
+  secondaryBtn: { children: 'Learn More', href: '/about-us' },
   features: [
     {
-      icon: 'tabler-accessible',
-      title: 'WCAG Compliant',
-      content: 'Ensure accessibility with WCAG compliant design for browsing.'
+      icon: 'tabler-code',
+      title: 'Interactive Coding Lessons',
+      content: 'Engage in hands-on exercises to master programming fundamentals efficiently.'
     },
     {
-      icon: 'tabler-brand-google',
-      title: 'SEO Friendly',
-      content: 'Boost visibility with SEO-friendly features for better search rankings.'
+      icon: 'tabler-brain',
+      title: 'AI-Powered Mentor',
+      content: 'Receive personalized feedback and learning paths tailored to your progress.'
     },
     {
-      icon: 'tabler-stack-2',
-      title: 'MUI Components',
-      content: 'Customize Material 3 design MUI components for enhanced aesthetics.'
+      icon: 'tabler-layout-dashboard',
+      title: 'Customizable Projects',
+      content: 'Apply your skills to real-world scenarios with guided, customizable projects.'
     },
     {
-      icon: 'tabler-rocket',
-      title: 'High Performance UI',
-      content: 'Adjust content layout for visual coherence on various screen sizes.'
+      icon: 'tabler-chart-bar',
+      title: 'Progress Tracking',
+      content: 'Monitor your learning journey with detailed progress reports and milestones.'
     },
     {
-      icon: 'tabler-help',
-      title: 'Detailed Documentation',
-      content: 'Access comprehensive documentation for easy guidance on platform usage.'
+      icon: 'tabler-book',
+      title: 'Extensive Resources',
+      content: 'Access a library of coding tutorials, guides, and documentation to supplement your learning.'
     },
     {
       icon: 'tabler-refresh',
-      title: 'Regular Updates',
-      content: 'Receive consistent updates to keep the platform secure and up-to-date with the latest features.'
+      title: 'Continuous Updates',
+      content: 'Benefit from regular updates, ensuring the latest industry-relevant content.'
     }
   ]
 };

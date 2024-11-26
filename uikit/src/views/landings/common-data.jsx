@@ -60,7 +60,7 @@ function footerData() {
 
 /***************************  NAVBAR - MEGAMENU LANDINGS  ***************************/
 
-export const landingMegamenu = {
+export const landingsMegamenu = {
   id: 'landings',
   title: 'Landings',
   megaMenu: {
@@ -123,7 +123,7 @@ function bannerData() {
       <Stack sx={{ gap: 1 }}>
         <Stack sx={{ alignItems: 'flex-start', gap: 1.5 }}>
           <Chip
-            label={<Typography variant="subtitle2">SaasAble Admin Template</Typography>}
+            label={<Typography variant="subtitle2">Interactive Coding Lessons</Typography>}
             icon={
               <CardMedia
                 component="img"
@@ -136,14 +136,14 @@ function bannerData() {
             size="small"
             sx={{ bgcolor: 'background.default', '& .MuiChip-label': { px: 1.5, py: 0.5 }, '& .MuiChip-icon': { ml: 1.25 } }}
           />
-          <Typography variant="h5">Exciting Dashboard on the Way!</Typography>
+          <Typography variant="h5">Learn to Code with Ease!</Typography>
         </Stack>
         <Typography variant="body2" sx={{ color: 'text.secondary' }}>
-          Effortlessly manage your app’s backend with customizable admin dashboards that enhance productivity.
+          Explore step-by-step coding lessons, practice problems, and personalized feedback to master programming fundamentals.
         </Typography>
       </Stack>
-      <Button href={ADMIN_PATH} variant="contained" sx={{ minWidth: 92, px: { xs: 2 }, py: 1.25 }}>
-        View Dashboard
+      <Button href={PAGE_PATH.lessonsPage} variant="contained" sx={{ minWidth: 92, px: { xs: 2 }, py: 1.25 }}>
+        Start Learning
       </Button>
     </Stack>
   );
@@ -151,47 +151,44 @@ function bannerData() {
 
 /***************************  NAVBAR - MEGAMENU PAGES  ***************************/
 
-export const pagesMegamenu = {
-  id: 'pages',
-  title: 'Pages',
+export const lessonsMegamenu = {
+  id: 'lessons',
+  title: 'Lessons',
   megaMenu: {
     type: MegaMenuType.MEGAMENU5,
-    toggleBtn: { children: 'Pages' },
+    toggleBtn: { children: 'Lessons' },
     popperWidth: 860,
     menuItems: [
       {
-        title: 'General',
+        title: 'Fundamentals of Programming',
         itemsList: [
-          { title: 'About', link: { href: 'https://stage.saasable.io/about', ...linkProps } },
-          { title: 'Career', status: 'Pro' },
-          { title: 'Privacy Policy', link: { href: PAGE_PATH.privacyPolicyPage, ...linkProps } },
-          { title: 'Contact Us', status: 'Pro' },
-          { title: 'FAQs', status: 'Pro' },
-          { title: 'Pricing', status: 'Pro' }
-        ]
-      },
-      {
-        title: 'Maintenance',
-        itemsList: [
-          { title: 'Coming Soon', status: 'Pro' },
-          { title: 'Error 404', link: { href: PRIVIEW_PATH.error404, ...linkProps } },
-          { title: 'Error 500', link: { href: PRIVIEW_PATH.error500, ...linkProps } },
-          { title: 'Under Maintenance', status: 'Pro' }
-        ]
-      },
-      {
-        title: 'External',
-        itemsList: [
-          { title: 'Blog', link: { href: 'https://blog.saasable.io/', ...linkProps } },
-          { title: 'Documentation', link: { href: DOCS_URL, ...linkProps } },
-          { title: 'Support', link: { href: branding.company.socialLink.support, ...linkProps } },
-          {
-            title: 'Discord',
-            link: { href: branding.company.socialLink.discord, ...linkProps }
-          },
-          { title: 'Terms & Conditions', link: { href: 'https://mui.com/store/terms/', ...linkProps } }
+          { title: 'Introduction to Variables', link: { href: 'https://stage.saasable.io/about', ...linkProps } },
+          { title: 'Control Structures' },
+          { title: 'Functions', link: { href: PAGE_PATH.privacyPolicyPage, ...linkProps } }
         ]
       }
+      // {
+      //   title: 'Maintenance',
+      //   itemsList: [
+      //     { title: 'Coming Soon', status: 'Pro' },
+      //     { title: 'Error 404', link: { href: PRIVIEW_PATH.error404, ...linkProps } },
+      //     { title: 'Error 500', link: { href: PRIVIEW_PATH.error500, ...linkProps } },
+      //     { title: 'Under Maintenance', status: 'Pro' }
+      //   ]
+      // },
+      // {
+      //   title: 'External',
+      //   itemsList: [
+      //     { title: 'Blog', link: { href: 'https://blog.saasable.io/', ...linkProps } },
+      //     { title: 'Documentation', link: { href: DOCS_URL, ...linkProps } },
+      //     { title: 'Support', link: { href: branding.company.socialLink.support, ...linkProps } },
+      //     {
+      //       title: 'Discord',
+      //       link: { href: branding.company.socialLink.discord, ...linkProps }
+      //     },
+      //     { title: 'Terms & Conditions', link: { href: 'https://mui.com/store/terms/', ...linkProps } }
+      //   ]
+      // }
     ],
     bannerData: bannerData()
   }

@@ -1,5 +1,5 @@
 {
-  "brandName": "SaasAble",
+  "brandName": "AndyAble",
   "title": "React Multipurpose UI Kit and Dashboard Template",
   "company": {
     "name": "Phoenixcoded",
@@ -17,7 +17,7 @@
   },
   "logo": {
     "main": "",
-    "logoIcon": "",
+    "logoIcon": "public/assets/images/shared/logo.png",
     "logoFab": "",
     "logoWatermark": ""
   }

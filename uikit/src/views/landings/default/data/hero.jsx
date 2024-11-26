@@ -9,12 +9,12 @@ export const hero = {
     label: (
       <>
         <Typography variant="caption" sx={{ color: 'text.secondary' }}>
-          One Kit, Endless
+          Learn, Practice, and
         </Typography>
         <Chip
           label={
             <Typography variant="caption" sx={{ color: 'primary.main' }}>
-              Possibilities
+              Master Coding
             </Typography>
           }
           sx={{ height: 24, bgcolor: 'primary.lighter', mr: -1, ml: 0.75, '& .MuiChip-label': { px: 1.25 } }}
@@ -31,17 +31,17 @@ export const hero = {
       </>
     )
   },
-  headLine: 'Multipurpose UI Kit and Dashboard Template',
-  captionLine: 'Design marketing pages and powerful admin dashboards with ease using our UI Kit, built following Material 3 guidelines.',
-  primaryBtn: { children: 'Explore Blocks', href: SECTION_PATH },
-  videoSrc: '/assets/videos/saasable-intro.mp4',
+  headLine: 'Coding Fundamentals Course',
+  captionLine: 'Learn programming basics, write clean code, and build confidence through interactive lessons and hands-on projects.',
+  primaryBtn: { children: 'Explore Courses', href: SECTION_PATH },
+  videoSrc: '/assets/videos/test.mp4',
   listData: [
     { image: '/assets/images/shared/react.svg', title: 'React 18' },
-    { image: '/assets/images/shared/next-js.svg', title: 'Next.js' },
+    { image: '/assets/images/shared/python.svg', title: 'Python' },
     { image: '/assets/images/shared/material-ui.svg', title: 'Material UI v6' },
     { image: '/assets/images/shared/typescript.svg', title: 'TypeScript' },
     { image: '/assets/images/shared/javascript.svg', title: 'JavaScript' },
-    { image: '/assets/images/shared/m3.svg', title: 'Material 3' },
+    { image: '/assets/images/shared/c++.svg', title: 'C++' },
     { image: '/assets/images/shared/figma.svg', title: 'Figma' }
   ]
 };
